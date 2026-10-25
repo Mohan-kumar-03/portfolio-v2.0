@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Scrolling Site</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        /* style.css */
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+      
+            /* Prevent vertical scrolling on the body */
+        }
+
+        .horizontal-container {
+            display: flex;
+            width: 100%;
+     
+        }
+
+        /* Hide scrollbar for a cleaner look */
+        .horizontal-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .panel {
+            width: 100vw;
+            height: 100vh;
+      
+        }
+
+        /* Sample colors for panels */
+        .panel-1 {
+            background: #2c3e50;
+        }
+
+        .panel-2 {
+            background: #e67e22;
+        }
+
+        .panel-3 {
+            background: #27ae60;
+        }
+
+        .panel-4 {
+            background: #8e44ad;
+        }
+
+        h1 {
+            font-size: 5rem;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="horizontal-container">
+        <section class="panel panel-1">
+            <h1>Welcome</h1>
+            <p>Scroll down or use your wheel to move sideways.</p>
+        </section>
+        <section class="panel panel-2">
+            <h1>Our Work</h1>
+            <p>Showcase your portfolio horizontally.</p>
+        </section>
+        <section class="panel panel-3">
+            <h1>Services</h1>
+            <p>Break the traditional vertical mold.</p>
+        </section>
+        <section class="panel panel-4">
+            <h1>Contact</h1>
+            <p>Get in touch today.</p>
+        </section>
+    </main>
+    <script>
+        // script.js
+        const scrollContainer = document.querySelector(".horizontal-container");
+
+        scrollContainer.addEventListener("wheel", (evt) => {
+            evt.preventDefault();
+            // Move horizontally by the amount the user scrolled vertically
+            scrollContainer.scrollLeft += evt.deltaY;
+        });
+
+    </script>
+</body>
+
+</html>

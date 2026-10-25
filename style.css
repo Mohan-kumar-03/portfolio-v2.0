@@ -1,0 +1,388 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  font-family: Inter, Arial, sans-serif;
+  background: #070707;
+  color: #fff;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+}
+body::-webkit-scrollbar {
+  height: 7px;
+}
+body::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 10px;
+}
+.track {
+  display: flex;
+  width: max-content;
+  height: 100vh;
+}
+.panel {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  flex: 0 0 100vw;
+  overflow: hidden;
+  padding: 45px 6vw;
+  display: flex;
+  align-items: center;
+}
+.nav {
+  position: fixed;
+  z-index: 20;
+  top: 0px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 80px;
+  /* background-color: red; */
+}
+.logo {
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 800;
+  -webkit-text-stroke: 0.5px #9b5cff;
+}
+.navlinks {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  padding-inline-end: 10px;
+  width: 400px;
+}
+.navlinks .btns {
+  gap: 30px;
+}
+.navlinks .btns a {
+  padding: 10px;
+  color: #9b5cff;
+  text-decoration: none;
+  padding-bottom: 2px;
+  transition: 0.3s all;
+}
+.navlinks .btns a:hover {
+  color: gray;
+  border-bottom: 3px solid #9b5cff;
+}
+.fa-list {
+  color: #9b5cff;
+  cursor: pointer;
+  display: none;
+  font-size: 20px;
+}
+.menu_show {
+  right: 0px;
+}
+.number {
+  font-size: 12px;
+  color: #777;
+  letter-spacing: 2px;
+}
+.hero {
+  background: radial-gradient(circle at 72% 45%, #17122b 0, #070707 38%);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+}
+.hero-copy {
+  width: 80%;
+  z-index: 3;
+  
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.kicker {
+  color: #a855f7;
+  font-size: 13px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.top {
+  font-size: 5rem;
+  
+}
+.border {
+  font-size: 3rem;
+  display: none;
+}
+h1 span {
+  color: #9b5cff;
+}
+.hero-copy p {
+  /* background-color: red; */
+  max-width: 520px;
+  color: #aaa;
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 30px 0;
+}
+.cta {
+  display: inline-block;
+  width: fit-content;
+  padding: 14px 22px;
+  border: 1px solid #444;
+  border-radius: 30px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+}
+.cta:hover {
+  background-color: #9b5cff;
+  border: 1px solid white;
+}
+.cta span {
+  transform: rotateX(90deg);
+  color: #fff;
+  font-size: 16px;
+}
+.sec{
+  width: 45vw;
+}
+.person {
+  width: 90%;
+  filter: drop-shadow(0 30px 60px rgba(137, 72, 255, 0.22));
+  animation: float 5s ease-in-out infinite;
+}
+@keyframes float {
+  50% {
+    transform: translateY(-12px);
+  }
+}
+.glow {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background: #7c3aed;
+  filter: blur(140px);
+  opacity: 0.15;
+  right: 15%;
+  top: 20%;
+}
+.about {
+  background: #ffffff;
+}
+.aboutbox {
+  max-width: 1000px;
+}
+.bigquote {
+  color: black;
+  font-size: clamp(40px, 6vw, 85px);
+  line-height: 0.98;
+  letter-spacing: -4px;
+}
+.bigquote span {
+  color: #777;
+}
+.about p {
+  max-width: 700px;
+  color: #999;
+  line-height: 1.8;
+  font-size: 17px;
+  margin-top: 35px;
+}
+.projects {
+  background: #090909;
+  display: block;
+  padding-top: 15vh;
+}
+.project-row {
+  display: flex;
+  gap: 5px;
+  flex-direction: row;
+  margin-top: 5px;
+}
+.card {
+  width: 310px;
+  height: 300px;
+  border: 1px solid #222;
+  border-radius: 22px;
+  padding: 25px;
+  background: linear-gradient(145deg, #141414, #090909);
+  transition: 0.35s;
+}
+.card:hover {
+  transform: translateY(-12px);
+  border-color: #8b5cf6;
+}
+.card .tag {
+  color: #9b5cff;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+.card h3 {
+  font-size: 30px;
+  margin: 10px 0 15px;
+  /* background-color: red; */
+}
+.card p {
+  color: #888;
+  line-height: 1.6;
+  font-size: 14px;
+}
+.skills {
+  background: #f2f2f2;
+  color: #090909;
+}
+.skills h2 {
+  font-size: clamp(65px, 10vw, 150px);
+  letter-spacing: -8px;
+  line-height: 0.8;
+}
+.skillgrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 45px;
+  max-width: 800px;
+}
+.pill {
+  padding: 13px 20px;
+  border: 1px solid #bbb;
+  border-radius: 30px;
+  font-size: 14px;
+}
+.contact {
+  background: linear-gradient(135deg, #0b0714, #111);
+}
+.contact h2 {
+  font-size: clamp(60px, 9vw, 130px);
+  letter-spacing: -7px;
+  line-height: 0.85;
+}
+.contact p {
+  color: #999;
+  margin: 30px 0;
+  font-size: 18px;
+}
+.email {
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+  border-bottom: 1px solid #555;
+  padding-bottom: 8px;
+}
+.scrollhint {
+  position: fixed;
+  z-index: 30;
+  bottom: 25px;
+  right: 6vw;
+  color: #666;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+@media (max-width: 800px) {
+  .panel {
+    padding: 35px 8vw;
+  }
+  .navlinks {
+    width: 100px;
+    height: 60vh;
+    flex-direction: row;
+  }
+
+  .navlinks .btns {
+    width: 300px;
+    height: 100vh;
+    align-items: center;
+    position: absolute;
+    top: 80px;
+    right: -500px;
+    padding: 20px;
+    gap: 20px;
+    justify-content: space-between;
+    transition: 0.4s all;
+    background-color: rgba(131, 125, 125, 0.3);
+  }
+
+  .navlinks .btns a {
+    display: block;
+    border-bottom: 1px solid gray;
+  }
+  .fa-list {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    display: block;
+  }
+  .hero{
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+  .hero-copy {
+    /* background-color: red; */
+    width: 100%;
+    height: 40vh;
+    /* background-color: red; */
+    flex-wrap: wrap;
+    padding: 10px;
+    justify-content: center;
+    gap: 20px;
+    
+  }
+  .kicker{
+    margin: 0px;
+    padding: 0px;
+  }
+  .top{
+    width: 100%;
+    font-size: 2.5rem;
+    padding: 0;
+    margin: 0;
+    /* background-color: red; */
+  }
+  .hero-copy p {
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+  }
+  .person {
+    width: 60%;
+    background-color: red;
+    position: relative;
+    /* background-color: rgb(109, 60, 60); */
+
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, 0);
+    /* background-color: rebeccapurple; */
+    opacity: 0.72;
+    animation: none;
+  }
+  .projects{
+    padding-top: 70px;
+  }
+  .project-row {
+    gap: 15px;
+    flex-direction: column;
+  }
+  .card {
+    width: 260px;
+    height: 240px;
+  }
+  .card h3 {
+    margin-top: 80px;
+  }
+}
